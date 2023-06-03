@@ -7,11 +7,29 @@ import ListItemText from '@mui/material/ListItemText';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import SquareFootIcon from '@mui/icons-material/SquareFoot';
 import ConstructionIcon from '@mui/icons-material/Construction';
+import BadgeIcon from '@mui/icons-material/Badge';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
 
-const drawerWidth = 240;
+const drawerWidth = 300;
+const linkData = [
+    {
+        name: 'Human Resources',
+    },
+    {
+        name: 'Quality',
+    },
+    {
+        name: 'Fabrication',
+    },
+    {
+        name: 'Countertop Installations',
+    },
+    {
+        name: 'Office Tips',
+    },
+]
 
 function LeftMenu() {
     return (
@@ -31,42 +49,22 @@ function LeftMenu() {
             >
                 <Toolbar></Toolbar>
                 <List>
-
-                    <ListItem key="Human Resources" disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <Diversity1Icon />
-                            </ListItemIcon>
-                            <ListItemText primary="Human Resources" />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem key="Quality" disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <SquareFootIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Quality" />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem key="Fabrication" disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <PrecisionManufacturingIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Fabrication" />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem key="Installations" disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <ConstructionIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Installations" />
-                        </ListItemButton>
-                    </ListItem>
+                    {
+                        linkData.map(item => (
+                            <ListItem key={item.name} disablePadding>
+                                <ListItemButton>
+                                    <ListItemIcon>
+                                        {item.name === 'Human Resources' && <Diversity1Icon />}
+                                        {item.name === 'Quality' && <SquareFootIcon />}
+                                        {item.name === 'Fabrication' && <PrecisionManufacturingIcon />}
+                                        {item.name === 'Countertop Installations' && <ConstructionIcon />}
+                                        {item.name === 'Office Tips' && <BadgeIcon />}
+                                    </ListItemIcon>
+                                    <ListItemText primary={item.name} />
+                                </ListItemButton>
+                            </ListItem>
+                        ))
+                    }
                 </List>
             </Drawer>
         </React.Fragment>

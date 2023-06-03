@@ -6,7 +6,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import React from 'react';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 const linkData = [
     {
         name: 'Blanco Sinks',

@@ -16,7 +16,6 @@ function BottomNavBar() {
                 sx={{
                     bottom: 0,
                     top: 'auto',
-                    backgroundColor: '#3c3c3c',
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
                 }}

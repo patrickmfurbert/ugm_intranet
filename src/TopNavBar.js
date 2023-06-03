@@ -12,7 +12,6 @@ function TopNavbar() {
             <AppBar
                 position="fixed"
                 sx={{
-                    backgroundColor:'#3c3c3c',
                     zIndex: 1400,
                 }}
             >
