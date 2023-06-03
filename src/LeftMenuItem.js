@@ -22,6 +22,18 @@ function LeftMenuItem({ name, link, subItems }) {
         setIsOpen(!isOpen);
     }
 
+    const iconChooser = (name) => {
+        switch (name) {
+            case "Human Resources": return <Diversity1Icon />;
+            case "Quality": return <SquareFootIcon />;
+            case "Fabrication": return <PrecisionManufacturingIcon />;
+            case "Countertop Installations": return <ConstructionIcon />;
+            case "Office Tips": return <BadgeIcon />;
+            default: return <BadgeIcon sx={{ color: 'transparent' }} />
+        }
+
+    }
+
     const TopLevelItem = (
         <ListItem key={name} disablePadding>
             <ListItemButton
@@ -29,11 +41,7 @@ function LeftMenuItem({ name, link, subItems }) {
                 onClick={handleExpandContractClick}
             >
                 <ListItemIcon>
-                    {name === 'Human Resources' && <Diversity1Icon />}
-                    {name === 'Quality' && <SquareFootIcon />}
-                    {name === 'Fabrication' && <PrecisionManufacturingIcon />}
-                    {name === 'Countertop Installations' && <ConstructionIcon />}
-                    {name === 'Office Tips' && <BadgeIcon />}
+                    {iconChooser(name)}
                 </ListItemIcon>
                 <ListItemText primary={name} />
                 {isExpandable && !isOpen && <ExpandMoreIcon />}
@@ -48,6 +56,9 @@ function LeftMenuItem({ name, link, subItems }) {
                 {subItems.map(item => (
                     <ListItem key={item.name}>
                         <ListItemButton>
+                            <ListItemIcon>
+                                {iconChooser(item.name)}
+                            </ListItemIcon>
                             <ListItemText primary={item.name} />
                         </ListItemButton>
                     </ListItem>
