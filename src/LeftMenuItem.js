@@ -54,7 +54,7 @@ function LeftMenuItem({ name, link, subItems }) {
         <Collapse in={isOpen} timeout="auto" unmountOnExit>
             <List>
                 {subItems.map(item => (
-                    <ListItem key={item.name}>
+                    <ListItem key={item.name} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
                                 {iconChooser(item.name)}
