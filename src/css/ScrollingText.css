@@ -1,0 +1,26 @@
+div.scrolling-limit{
+    width: 300px;
+    height: 20px;
+    overflow:hidden;
+    white-space:nowrap;
+    color: red;
+    font-weight: 500;
+    
+  }
+  
+  div.scrolling{
+    position: relative;
+    -webkit-animation: scroll 20s infinite linear;;
+    -moz-animation: scroll 20s infinite linear;
+    -o-animation: scroll 20s infinite linear;
+    animation: scroll 20s infinite linear;
+  }
+  
+  @keyframes scroll{
+      0%   {left: 500px;}
+      100% {left: -950px;}
+  }
+  @-webkit-keyframes scroll{
+      0%   {left: 500px;}
+      100% {left: -950px;}
+  }
