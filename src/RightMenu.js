@@ -34,7 +34,7 @@ const linkData = [
     },
     {
         name: 'Speed Label',
-        href: null
+        href: 'https://www.fifthgeartech.com/app/speedlabel/login'
     },
     {
         name: 'Limbel',
