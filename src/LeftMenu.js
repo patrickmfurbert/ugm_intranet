@@ -111,16 +111,12 @@ function LeftMenu() {
                     {
                         items.map(item => (
                             <LeftMenuItem 
-                                name={item.name} 
-                                link={item.link} 
-                                subItems={item.subItems}
+                                menuItem={item}
                                 />
                         ))
                     }
                 </List>
             </Drawer>
-
-
         </React.Fragment>
     );
 }
