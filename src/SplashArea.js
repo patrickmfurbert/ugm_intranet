@@ -12,8 +12,8 @@ function SplashArea(){
                 <Toolbar /> 
 
                 {/* Creates Lorem Text Examples */}
-                {[...Array(3)].map(element => (
-                    <LoremPaper />
+                {[...Array(3)].map((element, index) => (
+                    <LoremPaper key={index}/>
                 ))}
 
             </Box>

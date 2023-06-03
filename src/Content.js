@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import Navbar from "./TopNavBar";
+import TopNavBar from "./TopNavBar";
 import React from 'react';
 import BottomNavBar from './BottomNavBar';
 import LeftMenu from './LeftMenu';
@@ -8,26 +8,39 @@ import SplashArea from './SplashArea';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-const darkTheme = createTheme({
-    palette: {
-        mode: 'dark',
-    },
-});
+
 
 function Content() {
+    const [mode, setMode] = React.useState('dark');
+
+    const toggleDarkLight = () => {
+        mode === 'dark' ? setMode('light') : setMode('dark');
+        console.log(mode);
+    }
+
+    const theme = React.useMemo(
+        () =>
+            createTheme({
+                palette: {
+                    mode,
+                },
+            }),
+        [mode],
+    );
+
     return (
-        <ThemeProvider theme={darkTheme}>
-            <React.Fragment>
-                <Box sx={{ display: 'flex' }}>
-                    <CssBaseline />
-                    <Navbar />
-                    <LeftMenu />
-                    <SplashArea />
-                    <RightMenu />
-                    <BottomNavBar />
-                </Box >
-            </React.Fragment>
-        </ThemeProvider>
+            <ThemeProvider theme={theme}>
+                <React.Fragment>
+                    <Box sx={{ display: 'flex' }}>
+                        <CssBaseline />
+                        <TopNavBar setColorMode={toggleDarkLight} />
+                        <LeftMenu />
+                        <SplashArea />
+                        <RightMenu />
+                        <BottomNavBar />
+                    </Box >
+                </React.Fragment>
+            </ThemeProvider>
     );
 }
 
