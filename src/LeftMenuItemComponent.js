@@ -10,6 +10,8 @@ import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturi
 import BadgeIcon from '@mui/icons-material/Badge';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import BusinessIcon from '@mui/icons-material/Business';
 
 function LeftMenuItemComponent({ name, link, subItems, isOpen, setIsOpen }) {
 
@@ -26,6 +28,8 @@ function LeftMenuItemComponent({ name, link, subItems, isOpen, setIsOpen }) {
             case "Fabrication": return <PrecisionManufacturingIcon />;
             case "Countertop Installations": return <ConstructionIcon />;
             case "Office Tips": return <BadgeIcon />;
+            case "Vehicle Procedures": return <LocalShippingIcon />;
+            case "Building Procedures": return <BusinessIcon />;
             default: return <BadgeIcon sx={{ color: 'transparent' }} />
         }
     }

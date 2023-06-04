@@ -87,6 +87,27 @@ const items = [
             },
         ]
     },
+    {
+        name: 'Building Procedures',
+        link: null,
+        subItems: [
+            {
+                name: 'FAQ',
+                link: null,
+                subItems: null,
+            },
+        ]
+    },    {
+        name: 'Vehicle Procedures',
+        link: null,
+        subItems: [
+            {
+                name: 'FAQ',
+                link: null,
+                subItems: null,
+            },
+        ]
+    },
 ]
 
 function LeftMenu() {
