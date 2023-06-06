@@ -11,6 +11,7 @@ import BadgeIcon from '@mui/icons-material/Badge';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import LinkIcon from '@mui/icons-material/Link';
 import BusinessIcon from '@mui/icons-material/Business';
 
 function LeftMenuItemComponent({ name, link, subItems, isOpen, setIsOpen }) {
@@ -30,23 +31,33 @@ function LeftMenuItemComponent({ name, link, subItems, isOpen, setIsOpen }) {
             case "Office Tips": return <BadgeIcon />;
             case "Vehicle Procedures": return <LocalShippingIcon />;
             case "Building Procedures": return <BusinessIcon />;
+            case "External Links": return <LinkIcon />;
             default: return <BadgeIcon sx={{ color: 'transparent' }} />
         }
     }
 
     return (
         <ListItem key={name} disablePadding>
-            <ListItemButton
+            {isExpandable ? (<ListItemButton
                 data-key={name}
+                href={link}
                 onClick={handleExpandContractClick}
             >
                 <ListItemIcon>
                     {iconChooser(name)}
                 </ListItemIcon>
                 <ListItemText primary={name} />
-                {isExpandable && !isOpen && <ExpandMoreIcon />}
-                {isExpandable && isOpen && <ExpandLessIcon />}
-            </ListItemButton>
+                {!isOpen && <ExpandMoreIcon />}
+                {isOpen && <ExpandLessIcon />}
+            </ListItemButton>) : (<ListItemButton
+                data-key={name}
+                href={link}
+            >
+                <ListItemIcon>
+                    {iconChooser(name)}
+                </ListItemIcon>
+                <ListItemText primary={name} />
+            </ListItemButton>)}
         </ListItem>
     );
 

@@ -1,9 +1,7 @@
 import Box from '@mui/material/Box';
 import TopNavBar from "./TopNavBar";
 import React from 'react';
-import BottomNavBar from './BottomNavBar';
 import LeftMenu from './LeftMenu';
-import RightMenu from './RightMenu';
 import SplashArea from './SplashArea';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -36,8 +34,6 @@ function Content() {
                         <TopNavBar setColorMode={toggleDarkLight} />
                         <LeftMenu />
                         <SplashArea />
-                        <RightMenu />
-                        <BottomNavBar />
                     </Box >
                 </React.Fragment>
             </ThemeProvider>

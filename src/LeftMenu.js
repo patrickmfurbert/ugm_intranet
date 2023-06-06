@@ -97,7 +97,8 @@ const items = [
                 subItems: null,
             },
         ]
-    },    {
+    },    
+    {
         name: 'Vehicle Procedures',
         link: null,
         subItems: [
@@ -106,6 +107,52 @@ const items = [
                 link: null,
                 subItems: null,
             },
+        ]
+    },
+    {
+        name: 'External Links',
+        link: null,
+        subItems: [
+            {
+                name: 'Blanco Sinks',
+                link: 'https://www.blanco.com/us-en/',
+                subItems: null,
+            },
+            {
+                name: 'Pelican',
+                link: 'https://www.pelicansinks.com/',
+                subItems: null,
+            },
+            {
+                name: 'MSI',
+                link: 'https://www.msisurfaces.com/customer-portal/',
+                subItems: null,
+            },
+            {
+                name: 'Moraware',
+                link: 'https://upstategranitemarble.moraware.net/go',
+                subItems: null,
+            },
+            {
+                name: 'Production Schedule',
+                link: 'https://docs.google.com/spreadsheets/d/1bfD6CR-zKjY4sJYLwjTLAuH2chpB9x6QePcEId3S2tI/edit',
+                subItems: null,
+            },
+            {
+                name: 'Customer Visits',
+                link: 'https://docs.google.com/spreadsheets/d/1wnRIU7E5W7c2f0MKVy1F2UqNZbIhWTihZY5hWXQsR8Q/edit#gid=0',
+                subItems: null,
+            },
+            {
+                name: 'Speed Label',
+                link: 'https://www.fifthgeartech.com/app/speedlabel/login',
+                subItems: null,
+            },
+            {
+                name: 'Limbel',
+                link: 'https://auth.limblecmms.com/',
+                subItems: null,
+            }
         ]
     },
 ]
